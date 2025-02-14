@@ -46,7 +46,7 @@ a {
 }
 
 .page__body {
-  width: 1170px;
+  width: 1270px;
   min-height: 100%;
   margin: 0 auto;
 
@@ -65,4 +65,285 @@ a {
   transform: scale(0);
 }
 
+.button {
+  display: inline-block;
+  padding: 12px 32px;
 
+  font-size: inherit;
+  line-height: 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 26px;
+  background-color: #fcfcfc;
+
+  box-shadow:
+    0 0 0 4px rgb(252, 252, 252, 0.4),
+    0 4px 12px rgb(45, 52, 64, 0.1);
+}
+
+.button--another-bg {
+  color: #fcfcfc;
+  background-color: #ff2f64;
+  box-shadow: 0 0 0 4px rgb(255, 47, 100, 0.4);
+}
+
+/* Header */
+
+.page__header {
+  width: 1170px;
+  margin: 0 50px;
+  line-height: 20px;
+}
+
+.nav__phone {
+  font-weight: 700;
+}
+
+.user-nav__list {
+  font-size: 14px;
+}
+
+/* Footer */
+
+.page__footer {
+  width: 1170px;
+  margin: 0 50px;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.documents__item--for-supplier {
+  font-weight: 700;
+}
+
+.copyright {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* Main */
+
+.page__main {
+  width: 1170px;
+  margin: 0 50px;
+}
+
+.main-header__title {
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 900;
+}
+
+.main-header__subtitle {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.section__title {
+  margin: 0;
+
+  font-size: 32px;
+  line-height: 46px;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* Promo */
+
+.promo-card {
+  padding: 36px;
+  padding-right: 320px;
+
+  background-color: #ff7799;
+  border-radius: 16px;
+}
+
+
+.promo-card__title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+/* Advantages */
+
+.advantages {
+  padding: 24px;
+
+  background-color: #ffffff;
+  background-image: url("../img/bg/waffle-bg.jpg");
+  border-radius: 16px;
+}
+
+.advantages__wrapper {
+  padding: 56px 40px;
+
+  background-color: #ffffff;
+  border-radius: 16px;
+}
+
+.advantages .section__title {
+  width: 995px;
+  margin: 0 auto;
+  margin-bottom: 56px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+/* Additional */
+
+/* Blog */
+
+.blog {
+  width: 570px;
+  padding: 32px;
+  padding-bottom: 67px;
+
+  background-color: #ffffff;
+  background-image: url("../img/bg/table-setting-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border-radius: 16px;
+}
+
+.blog__text {
+  margin: 0;
+  margin-bottom: 12px;
+
+  line-height: 20px;
+}
+
+.blog__link {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+/* Subscribe */
+
+.subscribe {
+  width: 570px;
+  padding: 6px;
+
+  background-color: #ffffff;
+  background-image: url("../img/bg/subscribe-bg.jpg");
+
+  border-radius: 16px;
+}
+
+.subscribe__wrapper {
+  padding: 26px;
+  background-color: #ffffff;
+
+  border-radius: 16px;
+}
+
+.subscribe__text {
+  margin: 0;
+  margin-bottom: 42px;
+}
+
+/* Delivery */
+
+.delivery {
+  padding: 64px;
+  padding-left: 100px;
+
+  background-color: #ffffff;
+  background-image: url("../img/bg/delivery-bg.jpg");
+
+  border-radius: 16px;
+}
+
+.delivery__wrapper {
+  width: 371px;
+}
+
+.delivery .section__title {
+  text-align: left;
+}
+
+.delivery__form {
+  width: 500px;
+  padding: 40px;
+
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.delivery__form p {
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.field__label {
+  line-height: 20px;
+  font-weight: 700;
+}
+
+/* Main Footer */
+
+.main-footer {
+  padding: 64px;
+
+  background-color: #ffffff;
+  background-image: url("../img/bg/address-bg.jpg");
+  background-size: cover;
+
+  border-radius: 16px;
+}
+
+.contacts {
+  width: 343px;
+  padding: 40px;
+
+  background-color: #ffffff;
+
+  border-radius: 8px;
+}
+
+.contacts__address {
+  font-style: normal;
+}
+
+.contacts__title {
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.contacts__address-text,
+.contacts__phone {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.schedule {
+  display: block;
+  margin-bottom: 32px;
+}
+
+/* Catalog */
+
+.catalog-card {
+  background-color: #fcfcfc;
+  border-radius: 8px;
+}
+
+.catalog-card__title,
+.catalog-card__price {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.catalog-card__img {
+  border-radius: 50%;
+}

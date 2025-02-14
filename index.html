@@ -101,17 +101,17 @@
       <ul class="socials__list">
         <li class="socials__item">
           <a class="socials__link socials__link--tg" href="https://t.me/htmlacademy">
-            <span class="viasually-hidden">Телеграм</span>
+            <span class="visually-hidden">Телеграм</span>
           </a>
         </li>
         <li class="socials__item">
           <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy">
-            <span class="viasually-hidden">Вконтакте</span>
+            <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
         <li class="socials__item">
           <a class="socials__link socials__link--yt" href="https://www.youtube.com/user/htmlacademyru">
-            <span class="viasually-hidden">Ютуб</span>
+            <span class="visually-hidden">Ютуб</span>
           </a>
         </li>
       </ul>
@@ -119,7 +119,7 @@
 
     <section class="promo">
       <h2 class="visually-hidden">Промо акции</h2>
-      <p class="promo__title">Заказывайте мороженое<br> и получайте подарки!</p>
+      <p class="section__title">Заказывайте мороженое<br> и получайте подарки!</p>
 
       <article class="promo-card">
         <h3 class="promo-card__title">Малинка даром!</h3>
@@ -140,7 +140,7 @@
 
     <section class="catalog">
       <h2 class="visually-hidden">Популярные вкусы</h2>
-      <p class="catalog__title">Попробуйте самые популярные<br> вкусы нашего мороженого</p>
+      <p class="section__title">Попробуйте самые популярные<br> вкусы нашего мороженого</p>
 
       <ul class="catalog-list">
         <li class="catalog-card">
@@ -191,23 +191,25 @@
     </section>
 
     <section class="advantages">
-      <h2 class="visually-hidden">Наши преимущества</h2>
-      <p class="advantages__title">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+      <div class="advantages__wrapper">
+        <h2 class="visually-hidden">Наши преимущества</h2>
+        <p class="section__title">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
 
-      <ul class="advantages__list">
-        <li class="advantages__item advantages__item--ice-cream">
-          Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.
-        </li>
-        <li class="advantages__item advantages__item--leaf">
-          Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.
-        </li>
-        <li class="advantages__item advantages__item--cow-head">
-          Закупка ингредиентов производится только у проверенных фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.
-        </li>
-        <li class="advantages__item advantages__item--thermometer">
-          Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт мороженому растаять и позволяет сохранить превосходный вкус.
-        </li>
-      </ul>
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--ice-cream">
+            Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.
+          </li>
+          <li class="advantages__item advantages__item--leaf">
+            Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.
+          </li>
+          <li class="advantages__item advantages__item--cow-head">
+            Закупка ингредиентов производится только у проверенных фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.
+          </li>
+          <li class="advantages__item advantages__item--thermometer">
+            Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт мороженому растаять и позволяет сохранить превосходный вкус.
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="additional">
@@ -216,20 +218,59 @@
       <article class="blog">
         <h3 class="visually-hidden">Новое в нашем блоге</h3>
         <p class="blog__text"  aria-hidden="true">Новое в нашем блоге</p>
-        <a class="blog__link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+        <a class="blog__link" href="#">10 способов сервировки<br> фруктовых щербетов<br> к столу</a>
       </article>
 
       <article class="subscribe">
         <h3 class="visually-hidden">Раздел подписки</h3>
-        <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+
+        <div class="subscribe__wrapper">
+          <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 
         <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="email">Введите ваш email</label>
           <!-- для показа ошибки ввода поля добавить класс field-error -->
-          <input class="subscribe__field" type="email" id="email" name="email" placeholder="email@example.com" required>
+          <input class="field" type="email" id="email" name="email" placeholder="email@example.com" required>
           <button class="button button--another-bg" type="submit">Отправить</button>
         </form>
+        </div>
       </article>
+    </section>
+
+    <section class="delivery">
+      <div class="delivery__wrapper">
+        <h2 class="section__title">Доставка любимого<br> мороженого на дом</h2>
+        <p class="delivery__desc">Хочется полакомиться любимым десертом,<br> но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
+      </div>
+
+      <form class="delivery__form" action="https://echo.htmlacademy.ru" method="post">
+        <p>Укажите адрес и дату доставки, и мы свяжемся<br> с вами, чтобы подтвердить заказ.</p>
+
+        <div class="field-group">
+          <label class="field__label" for="date">Дата
+            <button class="info-icon" type="button">
+              <span class="visually-hidden">Дополнительная информация</span>
+            </button>
+          </label>
+          <input class="field" type="text" id="date" name="date" placeholder="01.04.2020" required>
+        </div>
+
+        <div class="field-group">
+          <label class="field__label" for="phone">Телефон</label>
+          <input class="field" type="text" id="phone" name="phone" placeholder="+7 800 999-00-00" required>
+        </div>
+
+        <div class="field-group">
+          <label class="field__label" for="address">Адрес
+            <button class="info-icon" type="button">
+              <span class="visually-hidden">Дополнительная информация</span>
+            </button>
+          </label>
+          <input class="field" type="text" id="address" name="address" placeholder="ул. Большая Конюшенная, 19/8" required>
+        </div>
+
+        <button class="button button--another-bg" type="submit">Отправить</button>
+      </form>
     </section>
 
     <footer class="main-footer">
@@ -243,7 +284,7 @@
           </p>
         </address>
 
-        <p class="contacts__title"></p>
+        <p class="contacts__title">Для заказов по телефону:</p>
         <a class="contacts__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <span class="schedule">(с 10 до 20 ежедневно)</span>
 
@@ -256,17 +297,17 @@
     <ul class="socials__list">
       <li class="socials__item">
         <a class="socials__link socials__link--tg" href="https://t.me/htmlacademy">
-          <span class="viasually-hidden">Телеграм</span>
+          <span class="visually-hidden">Телеграм</span>
         </a>
       </li>
       <li class="socials__item">
         <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy">
-          <span class="viasually-hidden">Вконтакте</span>
+          <span class="visually-hidden">Вконтакте</span>
         </a>
       </li>
       <li class="socials__item">
         <a class="socials__link socials__link--yt" href="https://www.youtube.com/user/htmlacademyru">
-          <span class="viasually-hidden">Ютуб</span>
+          <span class="visually-hidden">Ютуб</span>
         </a>
       </li>
     </ul>
