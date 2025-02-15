@@ -56,8 +56,18 @@ a {
   font-weight: 400;
   font-style: normal;
   color: #2d3440;
+}
 
+.page__body--bg1 {
   background-color: #feafc3;
+}
+
+.page__body--bg2 {
+  background-color: #69a9ff;
+}
+
+.page__body--bg3 {
+  background-color: #fcc850;
 }
 
 .visually-hidden {
