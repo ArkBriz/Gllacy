@@ -239,6 +239,7 @@ a {
 
 .section__title {
   margin: 0;
+  margin-bottom: 56px;
 
   font-size: 32px;
   line-height: 46px;
@@ -264,10 +265,6 @@ a {
 
   background-color: #ff7799;
   border-radius: 16px;
-}
-
-.promo .section__title {
-  margin-bottom: 55px;
 }
 
 .promo-card__title {
@@ -303,7 +300,6 @@ a {
 .advantages .section__title {
   width: 995px;
   margin: 0 auto;
-  margin-bottom: 56px;
 }
 
 .advantages__list {
@@ -384,6 +380,7 @@ a {
 }
 
 .delivery .section__title {
+  margin-bottom: 24px;
   text-align: left;
 }
 
@@ -450,6 +447,7 @@ a {
 /* Catalog header */
 
 .catalog-header .section__title {
+  margin-bottom: 0;
   text-align: left;
 }
 
@@ -487,12 +485,36 @@ a {
 
 /* Catalog */
 
+.catalog .section__title {
+  margin-bottom: 106px;
+}
+
+.catalog-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+  row-gap: 80px;
+
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .catalog-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   width: 270px;
   padding: 0 40px 24px;
 
   background-color: #fcfcfc;
   border-radius: 8px;
+}
+
+.catalog-card__title {
+  margin: 0;
+  margin-bottom: 8px;
 }
 
 .catalog-card__title,
@@ -503,7 +525,22 @@ a {
 }
 
 .catalog-card__img {
+  margin-top: -50px;
+  margin-bottom: 16px;
+
   border-radius: 50%;
+  order: -1;
+}
+
+.catalog-card__desc {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.catalog-card__wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 /* Catalog pagination */
