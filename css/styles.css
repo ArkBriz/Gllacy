@@ -316,6 +316,16 @@ a {
 
 /* Additional */
 
+.additional {
+  margin-bottom: 80px;
+}
+
+.additional__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
 /* Blog */
 
 .blog {

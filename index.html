@@ -212,26 +212,28 @@
     <section class="additional">
       <h2 class="visually-hidden">Разное</h2>
 
-      <article class="blog">
-        <h3 class="visually-hidden">Новое в нашем блоге</h3>
-        <p class="blog__text"  aria-hidden="true">Новое в нашем блоге</p>
-        <a class="blog__link" href="#">10 способов сервировки<br> фруктовых щербетов<br> к столу</a>
-      </article>
+      <div class="additional__container">
+        <article class="blog">
+          <h3 class="visually-hidden">Новое в нашем блоге</h3>
+          <p class="blog__text"  aria-hidden="true">Новое в нашем блоге</p>
+          <a class="blog__link" href="#">10 способов сервировки<br> фруктовых щербетов<br> к столу</a>
+        </article>
 
-      <article class="subscribe">
-        <h3 class="visually-hidden">Раздел подписки</h3>
+        <article class="subscribe">
+          <h3 class="visually-hidden">Раздел подписки</h3>
 
-        <div class="subscribe__wrapper">
-          <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+          <div class="subscribe__wrapper">
+            <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 
-        <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
-          <label class="visually-hidden" for="email">Введите ваш email</label>
-          <!-- для показа ошибки ввода поля добавить класс field-error -->
-          <input class="field" type="email" id="email" name="email" placeholder="email@example.com" required>
-          <button class="button button--another-bg" type="submit">Отправить</button>
-        </form>
-        </div>
-      </article>
+          <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="visually-hidden" for="email">Введите ваш email</label>
+            <!-- для показа ошибки ввода поля добавить класс field-error -->
+            <input class="field" type="email" id="email" name="email" placeholder="email@example.com" required>
+            <button class="button button--another-bg" type="submit">Отправить</button>
+          </form>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section class="delivery">
