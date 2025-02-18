@@ -248,19 +248,39 @@ a {
 
 /* Promo */
 
+.promo {
+  margin-bottom: 81px;
+}
+
+.promo__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
 .promo-card {
   padding: 36px;
-  padding-right: 320px;
+  padding-right: 220px;
 
   background-color: #ff7799;
   border-radius: 16px;
 }
 
+.promo .section__title {
+  margin-bottom: 55px;
+}
 
 .promo-card__title {
+  margin: 0;
+  margin-bottom: 28px;
+
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
+}
+
+.promo-card__desc {
+  margin-bottom: 28px;
 }
 
 /* Advantages */
