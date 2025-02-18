@@ -101,17 +101,51 @@ a {
 /* Header */
 
 .page__header {
+  display: flex;
   width: 1170px;
   margin: 0 50px;
+  padding: 24px 0;
+
   line-height: 20px;
 }
 
+.nav {
+  width: 1017px;
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 550px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav__link {
+  display: block;
+  padding: 8px 16px;
+}
+
+.nav__link--catalog {
+  padding-right: 38px;
+}
+
 .nav__phone {
+  margin-left: auto;
   font-weight: 700;
 }
 
 .user-nav__list {
+  max-width: 267px;
+  margin-left: 16px;
   font-size: 14px;
+}
+
+.user-nav__list .nav__item:not(:nth-child(3n)) {
+  margin-right: 16px;
 }
 
 /* Footer */
