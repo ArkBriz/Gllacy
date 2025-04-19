@@ -64,26 +64,28 @@
     </header>
 
     <form class="filters" action="https://echo.htmlacademy.ru" method="get">
-      <fieldset class="filters__group">
+      <fieldset class="filters__group sorting">
         <legend class="filters__group-title">Сортировка:</legend>
 
-        <select class="sorting__select" name="sorting" id="sorting">
-          <option value="popular">по популярности</option>
-          <option value="expensive">сначала дорогие</option>
-          <option value="cheap">сначала дешевые</option>
-        </select>
+        <div class="filters__group-container">
+          <select class="sorting__select" name="sorting" id="sorting">
+            <option value="popular">по популярности</option>
+            <option value="expensive">сначала дорогие</option>
+            <option value="cheap">сначала дешевые</option>
+          </select>
+        </div>
       </fieldset>
 
-      <fieldset class="filters__group">
+      <fieldset class="filters__group price">
         <legend class="filters__group-title">Цена: 100 ₽ - 500 ₽</legend>
 
-        <div class="range-container">
+        <div class="filters__group-container">
           <div class="range">
-            <div class="range-bar" style="left: 30px; width: 70px;">
-              <button class="range-toggle toggle-min" type="button">
+            <div class="range__bar" style="left: 30px; width: 70px;">
+              <button class="range__toggle range__toggle--min" type="button">
                 <span class="visually-hidden">Минимальная цена</span>
               </button>
-              <button class="range-toggle toggle-max" type="button">
+              <button class="range__toggle range__toggle--max" type="button">
                 <span class="visually-hidden">Максимальная цена</span>
               </button>
             </div>
@@ -91,59 +93,63 @@
         </div>
       </fieldset>
 
-      <fieldset class="filters__group">
+      <fieldset class="filters__group fat-content">
         <legend class="filters__group-title">Жирность:</legend>
 
-        <label class="control-group">
-          <input class="control" type="radio" name="fat-content" value="0%">
-          <span class="control-mark"></span>
-          <span class="control-label">0%</span>
-        </label>
-        <label class="control-group">
-          <input class="control" type="radio" name="fat-content" value="<10%" checked>
-          <span class="control-mark"></span>
-          <span class="control-label">до 10%</span>
-        </label>
-        <label class="control-group">
-          <input class="control" type="radio" name="fat-content" value="<30%>">
-          <span class="control-mark"></span>
-          <span class="control-label">до 30%</span>
-        </label>
-        <label class="control-group">
-          <input class="control" type="radio" name="fat-content" value=">30%>">
-          <span class="control-mark"></span>
-          <span class="control-label">выше 30%</span>
-        </label>
+        <div class="filters__group-container">
+          <label class="control-group">
+            <input class="control" type="radio" name="fat-content" value="0%">
+            <span class="control-mark"></span>
+            <span class="control-label">0%</span>
+          </label>
+          <label class="control-group">
+            <input class="control" type="radio" name="fat-content" value="<10%" checked>
+            <span class="control-mark"></span>
+            <span class="control-label">до 10%</span>
+          </label>
+          <label class="control-group">
+            <input class="control" type="radio" name="fat-content" value="<30%>">
+            <span class="control-mark"></span>
+            <span class="control-label">до 30%</span>
+          </label>
+          <label class="control-group">
+            <input class="control" type="radio" name="fat-content" value=">30%>">
+            <span class="control-mark"></span>
+            <span class="control-label">выше 30%</span>
+          </label>
+        </div>
       </fieldset>
 
-      <fieldset class="filters__group">
+      <fieldset class="filters__group fillers">
         <legend class="filters__group-title">Наполнители:</legend>
 
-        <label class="control-group">
-          <input class="control" type="checkbox" name="fillers" value="chokolate" checked>
-          <span class="control-mark"></span>
-          <span class="control-label">шоколадные</span>
-        </label>
-        <label class="control-group">
-          <input class="control" type="checkbox" name="fillers" value="sugar-sprinkles" checked>
-          <span class="control-mark"></span>
-          <span class="control-label">сахарные посыпки</span>
-        </label>
-        <label class="control-group">
-          <input class="control" type="checkbox" name="fillers" value="fruit">
-          <span class="control-mark"></span>
-          <span class="control-label">фрукты</span>
-        </label>
-        <label class="control-group">
-          <input class="control" type="checkbox" name="fillers" value="syrups">
-          <span class="control-mark"></span>
-          <span class="control-label">сиропы</span>
-        </label>
-        <label class="control-group">
-          <input class="control" type="checkbox" name="fillers" value="jams">
-          <span class="control-mark"></span>
-          <span class="control-label">джемы</span>
-        </label>
+        <div class="filters__group-container">
+          <label class="control-group">
+            <input class="control" type="checkbox" name="filler" value="chokolate" checked>
+            <span class="control-mark"></span>
+            <span class="control-label">шоколадные</span>
+          </label>
+          <label class="control-group">
+            <input class="control" type="checkbox" name="filler" value="sugar-sprinkles" checked>
+            <span class="control-mark"></span>
+            <span class="control-label">сахарные посыпки</span>
+          </label>
+          <label class="control-group">
+            <input class="control" type="checkbox" name="filler" value="fruit">
+            <span class="control-mark"></span>
+            <span class="control-label">фрукты</span>
+          </label>
+          <label class="control-group">
+            <input class="control" type="checkbox" name="filler" value="syrups">
+            <span class="control-mark"></span>
+            <span class="control-label">сиропы</span>
+          </label>
+          <label class="control-group">
+            <input class="control" type="checkbox" name="filler" value="jams">
+            <span class="control-mark"></span>
+            <span class="control-label">джемы</span>
+          </label>
+        </div>
       </fieldset>
 
       <button class="filters__button" type="submit">Применить</button>
