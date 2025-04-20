@@ -631,6 +631,19 @@ a {
 
 /* Catalog pagination */
 
+.catalog-pag {
+  display: flex;
+  justify-content: flex-end;
+  padding-block: 41px 81px;
+  border-bottom: 1px solid rgb(252, 252, 252, 0.3);
+}
+
+.catalog-pag__list {
+  display: flex;
+  width: 168px;
+  margin-left: 335px;
+}
+
 .catalog-pag__link {
   line-height: 20px;
 }
