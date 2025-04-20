@@ -159,6 +159,11 @@ a {
   margin-right: 16px;
 }
 
+.user-nav__list .nav__link {
+  background-color: rgb(252, 252, 252, 0.3);
+  border-radius: 30px;
+}
+
 /* Footer */
 
 .page__footer {
@@ -477,6 +482,7 @@ a {
 
   background-color: #ffffff;
   background-image: url("../img/bg/delivery-bg.jpg");
+  background-size: cover;
 
   border-radius: 16px;
 }
@@ -745,6 +751,7 @@ a {
 .catalog-pag {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   padding-block: 41px 81px;
   border-bottom: 1px solid rgb(252, 252, 252, 0.3);
 }
@@ -752,9 +759,24 @@ a {
 .catalog-pag__list {
   display: flex;
   width: 168px;
+  margin: 0;
   margin-left: 335px;
+  padding: 0;
+
+  list-style-type: none;
 }
 
 .catalog-pag__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+
   line-height: 20px;
+  border-radius: 50%;
+}
+
+.catalog-pag__link--current {
+  background-color: #fcfcfc;
 }
