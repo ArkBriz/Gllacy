@@ -237,13 +237,31 @@ a {
   margin: 0 50px;
 }
 
+.main-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offer-container {
+  width: 500px;
+  padding-left: 70px;
+}
+
 .main-header__title {
+  margin: 0;
+  margin-bottom: 24px;
+
   font-size: 36px;
   line-height: 46px;
   font-weight: 900;
 }
 
 .main-header__subtitle {
+  margin: 0;
+  margin-bottom: 48px;
+
   font-size: 18px;
   line-height: 24px;
 }
@@ -256,6 +274,44 @@ a {
   line-height: 46px;
   font-weight: 900;
   text-align: center;
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 625px;
+}
+
+.slider__wrap {
+  width: 327px;
+}
+
+.pag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 50px;
+
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pag__button {
+  width: 12px;
+  height: 12px;
+
+  background-color: rgb(252, 252, 252, 0.3);
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.pag__button--current {
+  background-color: rgb(252, 252, 252);
+  cursor: auto;
 }
 
 /* Promo */
