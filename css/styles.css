@@ -45,7 +45,14 @@ a {
   text-decoration: none;
 }
 
+.page {
+  height: 100%;
+}
+
 .page__body {
+  display: flex;
+  flex-direction: column;
+
   width: 1270px;
   min-height: 100%;
   margin: 0 auto;
@@ -68,6 +75,10 @@ a {
 
 .page__body--bg3 {
   background-color: #fcc850;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .visually-hidden {
