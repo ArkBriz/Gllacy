@@ -231,12 +231,12 @@
           <div class="subscribe__wrapper">
             <p class="subscribe__text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
 
-          <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
-            <label class="visually-hidden" for="email">Введите ваш email</label>
-            <!-- для показа ошибки ввода поля добавить класс field-error -->
-            <input class="field" type="email" id="email" name="email" placeholder="email@example.com" required>
-            <button class="button button--another-bg" type="submit">Отправить</button>
-          </form>
+            <form class="subscribe__form" action="https://echo.htmlacademy.ru" method="post">
+              <label class="visually-hidden" for="email">Введите ваш email</label>
+              <!-- для показа ошибки ввода поля добавить класс field-error -->
+              <input class="field" type="email" id="email" name="email" placeholder="email@example.com" required>
+              <button class="button button--another-bg" type="submit">Отправить</button>
+            </form>
           </div>
         </article>
       </div>
@@ -248,34 +248,36 @@
         <p class="delivery__desc">Хочется полакомиться любимым десертом,<br> но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
       </div>
 
-      <form class="delivery__form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="delivery__form-wrapper">
         <p>Укажите адрес и дату доставки, и мы свяжемся<br> с вами, чтобы подтвердить заказ.</p>
 
-        <div class="field-group">
-          <label class="field__label" for="date">Дата
-            <button class="info-icon" type="button">
-              <span class="visually-hidden">Дополнительная информация</span>
-            </button>
-          </label>
-          <input class="field" type="text" id="date" name="date" placeholder="01.04.2020" required>
-        </div>
+        <form class="delivery__form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="field-group">
+            <label class="field__label" for="date">Дата
+              <button class="info-icon" type="button">
+                <span class="visually-hidden">Дополнительная информация</span>
+              </button>
+            </label>
+            <input class="field" type="text" id="date" name="date" placeholder="01.04.2020" required>
+          </div>
 
-        <div class="field-group">
-          <label class="field__label" for="phone">Телефон</label>
-          <input class="field" type="text" id="phone" name="phone" placeholder="+7 800 999-00-00" required>
-        </div>
+          <div class="field-group">
+            <label class="field__label" for="phone">Телефон</label>
+            <input class="field" type="text" id="phone" name="phone" placeholder="+7 800 999-00-00" required>
+          </div>
 
-        <div class="field-group">
-          <label class="field__label" for="address">Адрес
-            <button class="info-icon" type="button">
-              <span class="visually-hidden">Дополнительная информация</span>
-            </button>
-          </label>
-          <input class="field" type="text" id="address" name="address" placeholder="ул. Большая Конюшенная, 19/8" required>
-        </div>
+          <div class="field-group address-group">
+            <label class="field__label" for="address">Адрес
+              <button class="info-icon" type="button">
+                <span class="visually-hidden">Дополнительная информация</span>
+              </button>
+            </label>
+            <input class="field" type="text" id="address" name="address" placeholder="ул. Большая Конюшенная, 19/8" required>
+          </div>
 
-        <button class="button button--another-bg" type="submit">Отправить</button>
-      </form>
+          <button class="button button--another-bg" type="submit">Отправить</button>
+        </form>
+      </div>
     </section>
 
     <footer class="main-footer">
