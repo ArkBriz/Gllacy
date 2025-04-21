@@ -225,7 +225,7 @@ a {
   line-height: 20px;
 }
 
-.socials__list {
+.socials {
   display: flex;
   flex-wrap: wrap;
 
@@ -392,8 +392,84 @@ a {
   width: 625px;
 }
 
-.slider__wrap {
+.slider__img {
+  position: relative;
+}
+
+.slider__img--small {
+  opacity: 0.4;
+}
+
+.slider__img::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ffcbd8;
+  z-index: -1;
+}
+
+.slider__img--main::before {
   width: 327px;
+  height: 327px;
+}
+
+.slider-btns-wrap {
+  position: absolute;
+  top: 50%;
+  left: -19px;
+  transform: translateY(-50%);
+
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% + 38px);
+}
+
+.slider-btn {
+  width: 38px;
+  height: 38px;
+
+  background-color: rgb(252, 252, 252, 0.3);
+  border: 2px solid #fcfcfc;
+  border-radius: 50%;
+}
+
+.slider-btn:hover {
+  background-color: #fcfcfc;
+}
+
+.slider-btn:hover svg {
+  fill: #2d3440;
+}
+
+.slider-btn:focus {
+  border: 2px solid #2d3440;
+}
+
+.slider-btn:focus svg {
+  fill: #2d3440;
+}
+
+.slider-btn:active {
+  background-color: rgb(252, 252, 252, 0.3);
+  border: none;
+}
+
+.slider-btn:disabled,
+.slider-btn:disabled:hover,
+.slider-btn:disabled:focus,
+.slider-btn:disabled:active {
+  background-color: rgb(252, 252, 252, 0.3);
+  border: 2px solid #fcfcfc;
+  opacity: 0.3;
+}
+
+.slider-btn:disabled:hover svg {
+  fill: #fcfcfc;
 }
 
 .pag {
@@ -411,7 +487,7 @@ a {
   width: 12px;
   height: 12px;
 
-  background-color: rgb(252, 252, 252, 0.3);
+  background-color: rgb(252, 252, 252, 0.5);
   border: none;
   border-radius: 50%;
 
@@ -421,6 +497,29 @@ a {
 .pag__button--current {
   background-color: rgb(252, 252, 252);
   cursor: auto;
+}
+
+.pag__button:hover {
+  outline: 1px solid #fcfcfc;
+  outline-offset: -1px;
+}
+
+.pag__button:focus {
+  outline: 1px solid #2d3440;
+  outline-offset: -1px;
+}
+
+.pag__button--current:focus {
+  outline: none;
+}
+
+.pag__button:active {
+  background-color: rgb(252, 252, 252, 0.3);
+  outline: none;
+}
+
+.pag__button--current:active {
+  background-color: rgb(252, 252, 252);
 }
 
 /* Promo */
