@@ -120,6 +120,11 @@ a {
   line-height: 20px;
 }
 
+.logo {
+  display: block;
+  margin-right: 16px;
+}
+
 .nav {
   width: 1017px;
   display: flex;
@@ -135,20 +140,6 @@ a {
   list-style-type: none;
 }
 
-.nav__link {
-  display: block;
-  padding: 8px 16px;
-}
-
-.nav__link--catalog {
-  padding-right: 38px;
-}
-
-.nav__phone {
-  margin-left: auto;
-  font-weight: 700;
-}
-
 .user-nav__list {
   max-width: 267px;
   margin-left: 16px;
@@ -159,9 +150,66 @@ a {
   margin-right: 16px;
 }
 
-.user-nav__list .nav__link {
-  background-color: rgb(252, 252, 252, 0.3);
+.nav__link {
+  position: relative;
+  display: block;
+  padding: 8px 16px;
   border-radius: 30px;
+}
+
+.user-nav__list .nav__link {
+  min-width: 32px;
+  min-height: 32px;
+
+  background-color: rgb(252, 252, 252, 0.3);
+}
+
+.catalog-link {
+  padding-right: 38px;
+}
+
+.login-link,
+.cart-link {
+  padding-left: 38px;
+}
+
+.nav__phone {
+  margin-left: auto;
+  font-weight: 700;
+}
+
+.nav__link svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.catalog-link svg {
+  left: 85px;
+  right: auto;
+}
+
+.login-link svg,
+.cart-link svg {
+  left: 16px;
+  right: auto;
+}
+
+.nav__link:hover {
+  background-color: rgb(252, 252, 252, 0.5);
+}
+
+.nav__link:focus {
+  background-color: rgb(252, 252, 252, 0.5);
+  outline: 2px solid #2d3440;
+}
+
+.nav__link:active {
+  background-color: #fcfcfc;
+  outline: none;
 }
 
 /* Footer */
