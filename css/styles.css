@@ -975,25 +975,213 @@ a {
 }
 
 .filters__group-container {
-  padding: 8px 24px;
+  padding: 8px 16px;
   background-color: rgb(252, 252, 252, 0.3);
   border-radius: 20px;
 }
 
-.sorting {
+.sorting .filters__group-container {
   width: 196px;
+  padding: 0;
+}
+
+.sorting__select {
+  width: 100%;
+  padding: 8px 16px;
+  padding-right: 32px;
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+
+  background-color: transparent;
+  background-image: url('../img/icons/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-position: center right 13px;
+  border: none;
+  border-radius: 20px;
+
+  appearance: none;
+}
+
+.sorting__select:hover {
+  background-color: rgb(252, 252, 252, 0.5);
+}
+
+.sorting__select:focus {
+  background-color: rgb(252, 252, 252, 0.4);
+  outline: 2px solid #fcfcfc;
 }
 
 .price {
   width: 196px;
 }
 
+.price .filters__group-container {
+  padding-block: 16px;
+}
+
+.range {
+  position: relative;
+  width: 164px;
+  height: 2px;
+  background-color: rgb(86, 92, 102, 0.3);
+  border-radius: 2px;
+}
+
+.range__bar {
+  position: absolute;
+  height: 2px;
+  background-color: rgb(86, 92, 102);
+}
+
+.range__toggle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 16px;
+  height: 16px;
+  padding: 0;
+
+  background-color: #fcfcfc;
+  border: 6px solid #2d3440;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toggle-min {
+  left: -8px;
+}
+
+.toggle-max {
+  right: -8px;
+}
+
+.range__toggle:hover,
+.range__toggle:focus {
+  background-color: #2d3440;
+  border-color: #fcfcfc;
+}
+
+.range__toggle:focus {
+  outline: 2px solid #2d3440;
+  outline-offset: -2px;
+}
+
+.range__toggle:active {
+  background-color: #2d3440;
+  border-color: #2d3440;
+}
+
 .fat-content {
   width: 383px;
 }
 
+.control {
+  position: relative;
+  display: inline-block;
+  margin-right: 16px;
+  padding-left: 24px;
+}
+
+.fat-content .control:nth-child(4n) {
+  margin-right: 0;
+}
+
+.control__mark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 16px;
+  height: 16px;
+
+  border: 1.5px solid #000000;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.fat-content .control__mark {
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + .control__mark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: block;
+  width: 6px;
+  height: 6px;
+  margin: auto;
+
+  background-color: #2d3440;
+  border-radius: 50%;
+}
+
 .fillers {
   width: 604px;
+}
+
+.fillers .control:nth-child(5n) {
+  margin-right: 0;
+}
+
+input[type="checkbox"]:checked + .control__mark::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 4px;
+  transform:rotate(45deg);
+
+  display: block;
+  width: 4px;
+  height: 1.3px;
+
+  background-color: #2d3440;
+  border-radius: 30%;
+  z-index: 2;
+}
+
+input[type="checkbox"]:checked + .control__mark::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 24%;
+  transform: rotate(-45deg);
+
+  display: block;
+  width: 12px;
+  height: 1.3px;
+
+  background-color: #2d3440;
+  border: 3px solid #fdc6d4;
+  border-radius: 20%;
+  box-sizing: content-box;
+  z-index: 1;
+}
+
+input:hover + .control__mark {
+  border-color: #fcfcfc;
+}
+
+input:disabled + .control__mark {
+  border-color: #000000;
+  opacity: 0.3;
+}
+
+input:checked:hover + .control__mark::before,
+input:checked:hover + .control__mark::after {
+  background-color: #fcfcfc;
+}
+
+input:checked:disabled + .control__mark::before,
+input:checked:disabled + .control__mark::after {
+  background-color: #000000;
 }
 
 .filters__button {
@@ -1006,8 +1194,31 @@ a {
   font-weight: 700;
 
   background-color: rgb(252, 252, 252, 0.3);
-  border: 2px solid #fcfcfc;
+  border: none;
   border-radius: 20px;
+
+  outline: 2px solid #fcfcfc;
+}
+
+.filters__button:hover {
+  background-color: #fcfcfc;
+  outline: 2px solid rgb(252, 252, 252, 0.3);
+}
+
+.filters__button:focus {
+  background-color: rgb(252, 252, 252, 0.3);
+  outline: 2px solid #2d3440;
+}
+
+.filters__button:active {
+  background-color: rgb(252, 252, 252, 0.5);
+  outline: none;
+}
+
+.filters__button:disabled {
+  background-color: rgb(252, 252, 252, 0.3);
+  outline: 2px solid #fcfcfc;
+  opacity: 0.5;
 }
 
 /* Catalog */
