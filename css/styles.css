@@ -135,24 +135,24 @@ a {
 
 .button:focus {
   background-color: rgb(252, 252, 252, 0.5);
-  box-shadow: 0 0 0 2px #2d3440;
+  box-shadow: 0 0 0 4px #2d3440;
 }
 
 .button--another-bg:focus {
   color: #fcfcfc;
   background-color: #ff2f64;
-  box-shadow: 0 0 0 2px #2d3440;
+  box-shadow: 0 0 0 4px #2d3440;
 }
 
 .button:active {
   background-color: rgb(252, 252, 252);
-  box-shadow: 0 0 0 2px #2d3440;
+  box-shadow: 0 0 0 4px #2d3440;
 }
 
 .button--another-bg:active {
   color: #fcfcfc;
   background-color: #feafc3;
-  box-shadow: 0 0 0 2px #2d3440;
+  box-shadow: 0 0 0 4px #2d3440;
 }
 
 .button:disabled,
@@ -1035,6 +1035,52 @@ a {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+.catalog-card__button {
+  width: 32px;
+  height: 32px;
+  background-color: #ff2f64;
+  border: none;
+  border-radius: 50%;
+}
+
+.catalog-card__button:hover {
+  background-color: rgb(252, 252, 252, 0.3);
+  border: 2px solid #ff2f64;
+}
+
+.catalog-card__button:hover svg {
+  fill: #2d3440;
+}
+
+.catalog-card__button:focus {
+  background-color: #ff2f64;
+  border: 2px solid #2d3440;
+}
+
+.catalog-card__button:focus svg {
+  fill: #fcfcfc;
+}
+
+.catalog-card__button:active {
+  background-color: #ffcbd8;
+  border: 2px solid #ff2f64;
+}
+
+.catalog-card__button:active svg {
+  fill: #2d3440;
+}
+
+.catalog-card__button:disabled,
+.catalog-card__button:disabled:focus {
+  background-color: #b9b9b9;
+  border: none;
+}
+
+.catalog-card__button:disabled svg,
+.catalog-card__button:disabled:focus svg {
+  fill: #565c66;
 }
 
 /* Catalog pagination */
