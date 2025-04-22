@@ -135,7 +135,7 @@ a {
 
 .button:focus {
   background-color: rgb(252, 252, 252, 0.5);
-  box-shadow: 0 0 0 4px #2d3440;
+  outline: 4px solid #2d3440;
 }
 
 .button--another-bg:focus {
@@ -1146,9 +1146,51 @@ a {
   height: 24px;
 
   line-height: 20px;
+
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 50%;
 }
 
 .catalog-pag__link--current {
   background-color: #fcfcfc;
+}
+
+.catalog-pag__link--prev {
+  background-image: url('../img/icons/arrow-left.svg');
+}
+
+.catalog-pag__link--next {
+  background-image: url('../img/icons/arrow-right.svg');
+}
+
+.catalog-pag__link--inactive {
+  opacity: 0.3;
+  cursor: auto;
+}
+
+.catalog-pag__link:hover {
+  background-color: rgb(252, 252, 252, 0.5);
+}
+
+.catalog-pag__link:focus {
+  background-color: rgb(252, 252, 252, 0.3);
+  border: 1px solid #2d3440;
+}
+
+.catalog-pag__link:active {
+  background-color: rgb(252, 252, 252, 0.5);
+  border: 1px solid #fcfcfc;
+}
+
+.catalog-pag__link--current:hover,
+.catalog-pag__link--current:active {
+  background-color: #fcfcfc;
+  border: none;
+}
+
+.catalog-pag__link--inactive:hover,
+.catalog-pag__link--inactive:active {
+  background-color: transparent;
+  border: none;
 }
