@@ -675,6 +675,23 @@ a {
 
 .advantages__item {
   padding-left: 64px;
+  background-repeat: no-repeat;
+}
+
+.advantages__item--ice-cream {
+  background-image: url('../img/icons/ice-cream.svg');
+}
+
+.advantages__item--cow {
+  background-image: url('../img/icons/cow.svg');
+}
+
+.advantages__item--leaf {
+  background-image: url('../img/icons/leaf.svg');
+}
+
+.advantages__item--thermometer {
+  background-image: url('../img/icons/thermometer.svg');
 }
 
 /* Additional */
@@ -829,6 +846,22 @@ a {
 
   line-height: 20px;
   font-weight: 700;
+}
+
+.info-icon {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  vertical-align: middle;
+
+  font-family: inherit;
+  font-size: 7px;
+  font-weight: 700;
+
+  background-color: transparent;
+  border: 1.5px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 /* Main Footer */
@@ -1029,6 +1062,8 @@ a {
 .catalog-card__desc {
   margin: 0;
   margin-bottom: 16px;
+
+  text-align: center;
 }
 
 .catalog-card__wrap {
