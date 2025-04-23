@@ -267,12 +267,12 @@ a {
   font-weight: 700;
 }
 
-.catalog-link {
+.catalog-menu .nav__link {
   padding-right: 38px;
 }
 
-.login-link,
-.cart-link {
+.login-item .nav__link,
+.cart-item .nav__link {
   padding-left: 38px;
 }
 
@@ -285,13 +285,13 @@ a {
   margin: auto;
 }
 
-.catalog-link svg {
+.catalog-menu svg {
   left: 85px;
   right: auto;
 }
 
-.login-link svg,
-.cart-link svg {
+.login-item svg,
+.cart-item svg {
   left: 16px;
   right: auto;
 }
@@ -306,7 +306,7 @@ a {
   fill: #fcfcfc;
 }
 
-.catalog-link.nav__link--active svg {
+.catalog-menu .nav__link--active svg {
   transform: rotate(180deg);
 }
 
@@ -385,11 +385,11 @@ a {
 
 .search {
   position: absolute;
-  margin-left: -325px;
 
   display: none;
   width: 356px;
   margin-top: 8px;
+  margin-left: -325px;
   padding: 24px 16px;
   background-color: #fcfcfc;
   border-radius: 4px;
@@ -398,6 +398,71 @@ a {
 
 .search-item:focus-within .search {
   display: block;
+}
+
+/* Login popup */
+
+.login {
+  position: absolute;
+
+  display: none;
+  width: 420px;
+  margin-top: 8px;
+  margin-left: -333px;
+  padding: 48px;
+  padding-bottom: 52px;
+
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.login-item:focus-within .login {
+  display: block;
+}
+
+.login__title {
+  margin: 0;
+  margin-bottom: 32px;
+
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.login__form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.login__list {
+  flex-grow: 1;
+
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.login__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.login__form .button {
+  margin-right: 23px;
+}
+
+.login__links {
+  display: grid;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.login__links a:hover {
+  opacity: 0.7;
+}
+
+.login__links a:active {
+  opacity: 0.4;
 }
 
 /* Footer */
