@@ -224,6 +224,10 @@ a {
   font-size: 14px;
 }
 
+.nav__item {
+  position: relative;
+}
+
 .user-nav__list .nav__item:not(:nth-child(3n)) {
   margin-right: 16px;
 }
@@ -242,6 +246,25 @@ a {
   background-color: rgb(252, 252, 252, 0.3);
 }
 
+.nav__link:hover {
+  background-color: rgb(252, 252, 252, 0.5);
+}
+
+.nav__link:focus {
+  background-color: rgb(252, 252, 252, 0.5);
+  outline: 2px solid #2d3440;
+}
+
+.nav__link:active {
+  background-color: #fcfcfc;
+  outline: none;
+}
+
+.nav__phone {
+  margin-left: auto;
+  font-weight: 700;
+}
+
 .catalog-link {
   padding-right: 38px;
 }
@@ -249,11 +272,6 @@ a {
 .login-link,
 .cart-link {
   padding-left: 38px;
-}
-
-.nav__phone {
-  margin-left: auto;
-  font-weight: 700;
 }
 
 .nav__link svg {
@@ -276,18 +294,87 @@ a {
   right: auto;
 }
 
-.nav__link:hover {
-  background-color: rgb(252, 252, 252, 0.5);
+.nav__link--active,
+.user-nav__list .nav__link--active {
+  color: #fcfcfc;
+  background-color: #ff4a78;
 }
 
-.nav__link:focus {
-  background-color: rgb(252, 252, 252, 0.5);
-  outline: 2px solid #2d3440;
+.nav__link--active svg {
+  fill: #fcfcfc;
 }
 
-.nav__link:active {
-  background-color: #fcfcfc;
+.catalog-link.nav__link--active svg {
+  transform: rotate(180deg);
+}
+
+.nav__link--active:hover {
+  background-color: #ff4a78;
+  opacity: 0.6;
+}
+
+.nav__link--active:focus {
+  background-color: #ff4a78;
+  outline: 2px solid #000000;
+}
+
+.nav__link--active:active {
   outline: none;
+  opacity: 0.3;
+}
+
+.catalog-menu__list {
+  position: absolute;
+
+  display: none;
+  width: 138px;
+
+  margin: 0;
+  margin-top: 8px;
+  padding: 0;
+  padding-block: 8px;
+
+  font-size: 14px;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  list-style-type: none;
+}
+
+.catalog-menu:focus-within .catalog-menu__list {
+  display: block;
+}
+
+.catalog-menu__link {
+  display: block;
+  padding: 6px 16px;
+}
+
+.catalog-menu__link--new {
+  padding-block: 8px;
+  font-weight: 700;
+}
+
+.catalog-menu__item:first-child::after {
+  content: "";
+  display: block;
+  width: 75%;
+  height: 1px;
+  margin: 4px 16px;
+
+  background-color: #b9b9b9;
+}
+
+.catalog-menu__link:hover {
+  background-color: #ffcbd8;
+}
+
+.catalog-menu__link:active {
+  background-color: #ff7799;
+}
+
+.catalog-menu__link--current {
+  color: #fcfcfc;
+  background-color: #ff4a78;
 }
 
 /* Footer */
@@ -1185,7 +1272,7 @@ input[type="checkbox"]:checked + .control__mark::after {
   content: "";
   position: absolute;
   top: 10%;
-  left: 24%;
+  left: 22%;
   transform: rotate(-45deg);
 
   display: block;
