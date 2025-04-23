@@ -212,6 +212,7 @@ a {
 .nav__list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   max-width: 550px;
   margin: 0;
   padding: 0;
@@ -222,6 +223,7 @@ a {
   max-width: 267px;
   margin-left: 16px;
   font-size: 14px;
+  line-height: 16px;
 }
 
 .nav__item {
@@ -323,6 +325,8 @@ a {
   opacity: 0.3;
 }
 
+/* Catalog popup menu */
+
 .catalog-menu__list {
   position: absolute;
 
@@ -375,6 +379,25 @@ a {
 .catalog-menu__link--current {
   color: #fcfcfc;
   background-color: #ff4a78;
+}
+
+/* Search popup */
+
+.search {
+  position: absolute;
+  margin-left: -325px;
+
+  display: none;
+  width: 356px;
+  margin-top: 8px;
+  padding: 24px 16px;
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.search-item:focus-within .search {
+  display: block;
 }
 
 /* Footer */
