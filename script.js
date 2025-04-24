@@ -42,3 +42,60 @@ links.forEach((link, index) => {
     }
   });
 });
+
+
+const body = document.querySelector('.page__body');
+const prevButton = document.querySelector('.slider-prev');
+const nextButton = document.querySelector('.slider-next');
+const fullPhoto = document.querySelector('.slider__img--main img');
+const smallPhotos = document.querySelectorAll('.slider__img--small img');
+const title = document.querySelector('.main-header__title');
+const subtitle = document.querySelector('.main-header__subtitle');
+
+const iceCreamPhotos = [
+  'img/strawberry-jam-promo.png',
+  'img/banana-promo.png',
+  'img/caramel-promo.png',
+];
+
+const titles = [
+  'Нежный пломбир\n с клубничным джемом',
+  'Сливочное мороженое\n со вкусом банана',
+  'Карамельный\u00A0пломбир с маршмеллоу',
+];
+
+const subtitles = [
+  'Натуральное мороженое из свежих сливок\n и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.',
+  'Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.',
+  'Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет\n сердца сладкоежек всех возрастов.',
+];
+
+let index = 0;
+
+nextButton.addEventListener('click', () => {
+  index = (index + 1) % iceCreamPhotos.length;
+
+  fullPhoto.src = iceCreamPhotos[index];
+  smallPhotos[0].src = iceCreamPhotos[(index + 1) % iceCreamPhotos.length];
+  smallPhotos[1].src = iceCreamPhotos[(index - 1 + iceCreamPhotos.length) % iceCreamPhotos.length];
+
+  title.textContent = titles[index];
+  subtitle.textContent = subtitles[index];
+
+  body.classList.remove(`page__body--bg${(index - 1 + iceCreamPhotos.length) % iceCreamPhotos.length}`);
+  body.classList.add(`page__body--bg${index}`);
+});
+
+prevButton.addEventListener('click', () => {
+  index = (index - 1 + iceCreamPhotos.length) % iceCreamPhotos.length;
+
+  fullPhoto.src = iceCreamPhotos[index];
+  smallPhotos[0].src = iceCreamPhotos[(index - 1 + iceCreamPhotos.length) % iceCreamPhotos.length];
+  smallPhotos[1].src = iceCreamPhotos[(index + 1) % iceCreamPhotos.length];
+
+  title.textContent = titles[index];
+  subtitle.textContent = subtitles[index];
+
+  body.classList.remove(`page__body--bg${(index + 1) % iceCreamPhotos.length}`);
+  body.classList.add(`page__body--bg${index}`);
+});

@@ -65,15 +65,15 @@ a {
   color: #2d3440;
 }
 
-.page__body--bg1 {
+.page__body--bg0 {
   background-color: #feafc3;
 }
 
-.page__body--bg2 {
+.page__body--bg1 {
   background-color: #69a9ff;
 }
 
-.page__body--bg3 {
+.page__body--bg2 {
   background-color: #fcc850;
 }
 
@@ -791,7 +791,7 @@ a {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #ffcbd8;
+  background-color: rgb(252, 252, 252, 0.3);
   z-index: -1;
 }
 
