@@ -7,85 +7,38 @@ const loginForm = document.querySelector('.login__form');
 const cartLink = document.querySelector('.cart-item .nav__link');
 const cart = document.querySelector('.cart');
 
-catalogLink.addEventListener('focus', () => {
-  catalogLink.classList.add('nav__link--active');
-});
+const links = [
+  catalogLink,
+  searchLink,
+  loginLink,
+  cartLink,
+];
 
-catalogMenu.addEventListener('focusin', () => {
-  catalogLink.classList.add('nav__link--active');
-});
+const popups = [
+  catalogMenu,
+  searchForm,
+  loginForm,
+  cart,
+];
 
-catalogMenu.addEventListener('focusout', () => {
-  if (!catalogMenu.contains(document.activeElement) && document.activeElement !== catalogLink) {
-    catalogLink.classList.remove('nav__link--active');
-  }
-});
+links.forEach((link, index) => {
+  link.addEventListener('focus', () => {
+    link.classList.add('nav__link--active');
+  });
 
-catalogLink.addEventListener('focusout', () => {
-  if (!catalogMenu.contains(document.activeElement)) {
-    catalogLink.classList.remove('nav__link--active');
-  }
-});
+  popups[index].addEventListener('focusin', () => {
+    link.classList.add('nav__link--active');
+  });
 
+  popups[index].addEventListener('focusout', () => {
+    if (!popups[index].contains(document.activeElement) && document.activeElement !== link) {
+      link.classList.remove('nav__link--active');
+    }
+  });
 
-searchLink.addEventListener('focus', () => {
-  searchLink.classList.add('nav__link--active');
-});
-
-searchForm.addEventListener('focusin', () => {
-  searchLink.classList.add('nav__link--active');
-});
-
-searchForm.addEventListener('focusout', () => {
-  if (!catalogMenu.contains(document.activeElement) && document.activeElement !== searchLink) {
-    searchLink.classList.remove('nav__link--active');
-  }
-});
-
-searchLink.addEventListener('focusout', () => {
-  if (!catalogMenu.contains(document.activeElement)) {
-    searchLink.classList.remove('nav__link--active');
-  }
-});
-
-
-loginLink.addEventListener('focus', () => {
-  loginLink.classList.add('nav__link--active');
-});
-
-loginForm.addEventListener('focusin', () => {
-  loginLink.classList.add('nav__link--active');
-});
-
-loginForm.addEventListener('focusout', () => {
-  if (!loginForm.contains(document.activeElement) && document.activeElement !== loginLink) {
-    loginLink.classList.remove('nav__link--active');
-  }
-});
-
-loginLink.addEventListener('focusout', () => {
-  if (!loginForm.contains(document.activeElement)) {
-    loginLink.classList.remove('nav__link--active');
-  }
-});
-
-
-cartLink.addEventListener('focus', () => {
-  cartLink.classList.add('nav__link--active');
-});
-
-cart.addEventListener('focusin', () => {
-  cartLink.classList.add('nav__link--active');
-});
-
-cart.addEventListener('focusout', () => {
-  if (!cart.contains(document.activeElement) && document.activeElement !== cartLink) {
-    cartLink.classList.remove('nav__link--active');
-  }
-});
-
-cartLink.addEventListener('focusout', () => {
-  if (!cart.contains(document.activeElement)) {
-    cartLink.classList.remove('nav__link--active');
-  }
+  link.addEventListener('focusout', () => {
+    if (!popups[index].contains(document.activeElement)) {
+      link.classList.remove('nav__link--active');
+    }
+  });
 });
