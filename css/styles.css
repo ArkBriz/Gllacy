@@ -1186,7 +1186,8 @@ a {
   font-weight: 700;
 }
 
-.info-icon {
+.info {
+  position: relative;
   width: 12px;
   height: 12px;
   padding: 0;
@@ -1200,6 +1201,48 @@ a {
   border: 1.5px solid #000000;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.info__text {
+  position: absolute;
+  left: 20px;
+  top: -11px;
+
+  display: none;
+  min-width: 146px;
+  max-width: 168px;
+  padding: 10px 8px;
+
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  text-align: left;
+
+  background-color: #fcfcfc;
+  border: 1px solid #b9b9b9;
+  border-radius: 1px;
+  box-shadow: 0 4px 8px rgb(194, 194, 194, 0.2);
+}
+
+.info__text::before {
+  content: "";
+  position: absolute;
+  left: -5.3px;
+
+  display: none;
+  width: 9px;
+  height: 9px;
+
+  background-color: #fcfcfc;
+  border-top: 1px solid #b9b9b9;
+  border-left: 1px solid #b9b9b9;
+
+  transform: rotate(-45deg);
+}
+
+.info:hover .info__text,
+.info:hover .info__text::before {
+  display: block;
 }
 
 /* Main Footer */
