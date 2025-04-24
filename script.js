@@ -51,6 +51,7 @@ const fullPhoto = document.querySelector('.slider__img--main img');
 const smallPhotos = document.querySelectorAll('.slider__img--small img');
 const title = document.querySelector('.main-header__title');
 const subtitle = document.querySelector('.main-header__subtitle');
+const pagButtons = document.querySelectorAll('.pag__button');
 
 const iceCreamPhotos = [
   'img/strawberry-jam-promo.png',
@@ -70,32 +71,51 @@ const subtitles = [
   'Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет\n сердца сладкоежек всех возрастов.',
 ];
 
-let index = 0;
+let currIndex = 0;
+
+const getIndexes = (index) => {
+  let nextIndex = (index + 1) % iceCreamPhotos.length;
+  let prevIndex = (index - 1 + iceCreamPhotos.length) % iceCreamPhotos.length;
+  return { nextIndex, prevIndex };
+};
+
+const changePagButton = (index) => {
+  pagButtons.forEach((button) => {
+    button.classList.remove('pag__button--current');
+  });
+  pagButtons[index].classList.add('pag__button--current');
+};
 
 nextButton.addEventListener('click', () => {
-  index = (index + 1) % iceCreamPhotos.length;
+  currIndex = (currIndex + 1) % iceCreamPhotos.length;
+  const { nextIndex, prevIndex } = getIndexes(currIndex);
 
-  fullPhoto.src = iceCreamPhotos[index];
-  smallPhotos[0].src = iceCreamPhotos[(index + 1) % iceCreamPhotos.length];
-  smallPhotos[1].src = iceCreamPhotos[(index - 1 + iceCreamPhotos.length) % iceCreamPhotos.length];
+  fullPhoto.src = iceCreamPhotos[currIndex];
+  smallPhotos[0].src = iceCreamPhotos[nextIndex];
+  smallPhotos[1].src = iceCreamPhotos[prevIndex];
 
-  title.textContent = titles[index];
-  subtitle.textContent = subtitles[index];
+  title.textContent = titles[currIndex];
+  subtitle.textContent = subtitles[currIndex];
 
-  body.classList.remove(`page__body--bg${(index - 1 + iceCreamPhotos.length) % iceCreamPhotos.length}`);
-  body.classList.add(`page__body--bg${index}`);
+  changePagButton(currIndex);
+
+  body.classList.remove(`page__body--bg${prevIndex}`);
+  body.classList.add(`page__body--bg${currIndex}`);
 });
 
 prevButton.addEventListener('click', () => {
-  index = (index - 1 + iceCreamPhotos.length) % iceCreamPhotos.length;
+  currIndex = (currIndex - 1 + iceCreamPhotos.length) % iceCreamPhotos.length;
+  const { nextIndex, prevIndex } = getIndexes(currIndex);
 
-  fullPhoto.src = iceCreamPhotos[index];
-  smallPhotos[0].src = iceCreamPhotos[(index - 1 + iceCreamPhotos.length) % iceCreamPhotos.length];
-  smallPhotos[1].src = iceCreamPhotos[(index + 1) % iceCreamPhotos.length];
+  fullPhoto.src = iceCreamPhotos[currIndex];
+  smallPhotos[0].src = iceCreamPhotos[prevIndex];
+  smallPhotos[1].src = iceCreamPhotos[nextIndex];
 
-  title.textContent = titles[index];
-  subtitle.textContent = subtitles[index];
+  title.textContent = titles[currIndex];
+  subtitle.textContent = subtitles[currIndex];
 
-  body.classList.remove(`page__body--bg${(index + 1) % iceCreamPhotos.length}`);
-  body.classList.add(`page__body--bg${index}`);
+  changePagButton(currIndex);
+
+  body.classList.remove(`page__body--bg${(currIndex + 1) % iceCreamPhotos.length}`);
+  body.classList.add(`page__body--bg${currIndex}`);
 });
