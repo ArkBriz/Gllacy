@@ -327,20 +327,26 @@ a {
 
 /* Catalog popup menu */
 
-.catalog-menu__popup {
+.popup {
   position: absolute;
+  right: 0;
 
   display: none;
+  margin-top: 8px;
+
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.catalog-menu__popup {
   width: 138px;
 
-  margin: 0;
-  margin-top: 8px;
+  right: auto;
   padding: 0;
   padding-block: 8px;
 
   font-size: 14px;
-  background-color: #fcfcfc;
-  border-radius: 4px;
   list-style-type: none;
 }
 
@@ -384,16 +390,8 @@ a {
 /* Search popup */
 
 .search-item__popup {
-  position: absolute;
-  right: 0;
-
-  display: none;
   width: 356px;
-  margin-top: 8px;
   padding: 24px 16px;
-  background-color: #fcfcfc;
-  border-radius: 4px;
-  z-index: 10;
 }
 
 .search-item:focus-within .search-item__popup {
@@ -403,18 +401,9 @@ a {
 /* Login popup */
 
 .login-popup {
-  position: absolute;
-  right: 0;
-
-  display: none;
   width: 420px;
-  margin-top: 8px;
   padding: 48px;
   padding-bottom: 52px;
-
-  background-color: #fcfcfc;
-  border-radius: 4px;
-  z-index: 10;
 }
 
 .login-item:focus-within .login-popup {
@@ -468,16 +457,8 @@ a {
 /* Cart popup */
 
 .cart-popup {
-  position: absolute;
-  display: none;
   min-width: 288px;
-  margin-top: 8px;
-  right: 0;
   padding: 48px;
-
-  background-color: #fcfcfc;
-  border-radius: 4px;
-  z-index: 10;
 }
 
 .cart-item:focus-within .cart-popup {
@@ -1070,7 +1051,7 @@ a {
 
 .field {
   width: 100%;
-  padding: 14px 15px;
+  padding: 13px 15px;
   border: 1px solid #b9b9b9;
   border-radius: 4px;
 
@@ -1285,6 +1266,84 @@ a {
 .schedule {
   display: block;
   margin-bottom: 32px;
+}
+
+/* Feedback modal */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgb(45, 52, 64, 0.3);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 64px;
+
+  background-color: #fcfcfc;
+  border-radius: 4px;
+}
+
+.modal-close {
+  display: none;
+}
+
+.modal-feedback {
+  width: 570px;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  background-color: #fcfcfc;
+  background-image: url(../img/icons/cross.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal__close-button:hover {
+  background-color: rgb(255, 203, 216, 0.6);
+}
+
+.modal__close-button:active {
+  opacity: 0.3;
+}
+
+.modal__title {
+  margin: 0;
+  margin-bottom: 32px;
+
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form__group {
+  margin-bottom: 16px;
+}
+
+.feedback-form .button {
+  margin-top: 16px;
+  margin-left: auto;
 }
 
 /* Catalog header */
