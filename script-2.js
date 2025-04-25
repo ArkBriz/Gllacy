@@ -25,6 +25,12 @@ const subtitles = [
   'Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет\n сердца сладкоежек всех возрастов.',
 ];
 
+const photoDescriptions = [
+  'Пломбир с клубничным джемом',
+  'Сливочное мороженое со вкусом банана',
+  'Карамельный пломбир с маршмеллоу',
+]
+
 let currIndex = 0;
 
 const getIndexes = (index) => {
@@ -40,16 +46,22 @@ const changePagButton = (index) => {
   pagButtons[index].classList.add('pag__button--current');
 };
 
-nextButton.addEventListener('click', () => {
+nextButton.addEventListener('click', (evt) => {
+  evt.preventDefault();
+
   currIndex = (currIndex + 1) % iceCreamPhotos.length;
   const { nextIndex, prevIndex } = getIndexes(currIndex);
+
+  title.textContent = titles[currIndex];
+  subtitle.textContent = subtitles[currIndex];
 
   fullPhoto.src = iceCreamPhotos[currIndex];
   smallPhotos[0].src = iceCreamPhotos[nextIndex];
   smallPhotos[1].src = iceCreamPhotos[prevIndex];
 
-  title.textContent = titles[currIndex];
-  subtitle.textContent = subtitles[currIndex];
+  fullPhoto.alt = photoDescriptions[currIndex];
+  smallPhotos[0].alt = photoDescriptions[nextIndex];
+  smallPhotos[1].alt = photoDescriptions[prevIndex];
 
   changePagButton(currIndex);
 
@@ -57,13 +69,19 @@ nextButton.addEventListener('click', () => {
   body.classList.add(`page__body--bg${currIndex}`);
 });
 
-prevButton.addEventListener('click', () => {
+prevButton.addEventListener('click', (evt) => {
+  evt.preventDefault();
+
   currIndex = (currIndex - 1 + iceCreamPhotos.length) % iceCreamPhotos.length;
   const { nextIndex, prevIndex } = getIndexes(currIndex);
 
   fullPhoto.src = iceCreamPhotos[currIndex];
   smallPhotos[0].src = iceCreamPhotos[prevIndex];
   smallPhotos[1].src = iceCreamPhotos[nextIndex];
+
+  fullPhoto.alt = photoDescriptions[currIndex];
+  smallPhotos[0].alt = photoDescriptions[prevIndex];
+  smallPhotos[1].alt = photoDescriptions[nextIndex];
 
   title.textContent = titles[currIndex];
   subtitle.textContent = subtitles[currIndex];
@@ -72,4 +90,18 @@ prevButton.addEventListener('click', () => {
 
   body.classList.remove(`page__body--bg${(currIndex + 1) % iceCreamPhotos.length}`);
   body.classList.add(`page__body--bg${currIndex}`);
+});
+
+
+const feedbackModal = document.querySelector('.modal-container');
+const feedbackButton = document.querySelector('.contacts .button');
+const closeButton = feedbackModal.querySelector('.modal__close-button');
+
+feedbackButton.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  feedbackModal.classList.remove('modal-close');
+});
+
+closeButton.addEventListener('click', () => {
+  feedbackModal.classList.add('modal-close');
 });

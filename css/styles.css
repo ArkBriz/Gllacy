@@ -203,6 +203,12 @@ a {
   margin-right: 16px;
 }
 
+.logo:focus {
+  outline: 2px solid #2d3440;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 .nav {
   width: 1017px;
   display: flex;
@@ -264,7 +270,14 @@ a {
 
 .nav__phone {
   margin-left: auto;
+  padding: 5px;
   font-weight: 700;
+}
+
+.nav__phone:focus {
+  outline: 2px solid #2d3440;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .catalog-menu .nav__link {
@@ -364,6 +377,11 @@ a {
   font-weight: 700;
 }
 
+.catalog-menu__link--current {
+  color: #fcfcfc;
+  background-color: #ff4a78;
+}
+
 .catalog-menu__item:first-child::after {
   content: "";
   display: block;
@@ -382,9 +400,9 @@ a {
   background-color: #ff7799;
 }
 
-.catalog-menu__link--current {
-  color: #fcfcfc;
-  background-color: #ff4a78;
+.catalog-menu__link:focus {
+  outline: 2px solid #2d3440;
+  border-radius: 4px;
 }
 
 /* Search popup */
@@ -454,6 +472,12 @@ a {
   opacity: 0.4;
 }
 
+.login-popup__links a:focus {
+  outline: 2px solid #2d3440;
+  border-radius: 4px;
+}
+
+
 /* Cart popup */
 
 .cart-popup {
@@ -518,6 +542,12 @@ a {
   opacity: 0.5;
 }
 
+.cart-popup__item a:focus {
+  outline: 2px solid #2d3440;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 .cart-popup__price {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
@@ -553,6 +583,10 @@ a {
 
 .cart-popup__delete-button:active {
   opacity: 0.3;
+}
+
+.cart-popup__delete-button:focus {
+  outline: 2px solid #2d3440;
 }
 
 .cart-popup__wrap {
@@ -671,7 +705,8 @@ a {
 }
 
 .documents__link:focus {
-  outline: 1px solid #2d3440;
+  outline: 2px solid #2d3440;
+  outline-offset: 2px;
   border-radius: 4px;
 }
 
@@ -693,6 +728,12 @@ a {
   margin-bottom: 14px;
 }
 
+.copyright__logo:focus {
+  outline: 2px solid #2d3440;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 .copyright p {
   margin: 0;
 }
@@ -700,6 +741,12 @@ a {
 .copyright__text {
   text-decoration: underline;
   text-underline-position: under;
+}
+
+.copyright__text:focus {
+  outline: 2px solid #2d3440;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 /* Main */
@@ -793,6 +840,9 @@ a {
 }
 
 .slider-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 38px;
   height: 38px;
 
@@ -811,6 +861,7 @@ a {
 
 .slider-btn:focus {
   border: 2px solid #2d3440;
+  outline: none;
 }
 
 .slider-btn:focus svg {
@@ -853,36 +904,11 @@ a {
   background-color: rgb(252, 252, 252, 0.5);
   border: none;
   border-radius: 50%;
-
-  cursor: pointer;
 }
 
 .pag__button--current {
   background-color: rgb(252, 252, 252);
   cursor: auto;
-}
-
-.pag__button:hover {
-  outline: 1px solid #fcfcfc;
-  outline-offset: -1px;
-}
-
-.pag__button:focus {
-  outline: 1px solid #2d3440;
-  outline-offset: -1px;
-}
-
-.pag__button--current:focus {
-  outline: none;
-}
-
-.pag__button:active {
-  background-color: rgb(252, 252, 252, 0.3);
-  outline: none;
-}
-
-.pag__button--current:active {
-  background-color: rgb(252, 252, 252);
 }
 
 /* Promo */
@@ -903,7 +929,7 @@ a {
 
   background-color: #ff7799;
   background-repeat: no-repeat;
-  background-position: right 0;
+  background-position: bottom 0 right 0;
   border-radius: 16px;
 }
 
@@ -1017,6 +1043,11 @@ a {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
+}
+
+.blog__link:focus {
+  outline: 2px solid #2d3440;
+  border-radius: 4px;
 }
 
 /* Subscribe */
@@ -1230,6 +1261,11 @@ a {
   display: block;
 }
 
+.info:focus {
+  border-width: 2px;
+  outline: none;
+}
+
 /* Main Footer */
 
 .main-footer {
@@ -1265,6 +1301,12 @@ a {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+}
+
+.contacts__phone:focus {
+  outline: 2px solid #2d3440;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .schedule {
@@ -1405,6 +1447,12 @@ a {
 .breadscrumbs__link--current {
   text-decoration: underline;
   text-underline-position: under;
+}
+
+.breadscrumbs__link:focus {
+  outline: 2px solid #2d3440;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 /* Filters */
@@ -1633,6 +1681,10 @@ input:hover + .control__mark {
   border-color: #fcfcfc;
 }
 
+input:focus + .control__mark {
+  outline: 1px solid #000000;
+}
+
 input:disabled + .control__mark {
   border-color: #000000;
   opacity: 0.3;
@@ -1767,6 +1819,7 @@ input:checked:disabled + .control__mark::after {
 .catalog-card__button:focus {
   background-color: #ff2f64;
   border: 2px solid #2d3440;
+  outline: none;
 }
 
 .catalog-card__button:focus svg {
@@ -1851,6 +1904,7 @@ input:checked:disabled + .control__mark::after {
 .catalog-pag__link:focus {
   background-color: rgb(252, 252, 252, 0.3);
   border: 1px solid #2d3440;
+  outline: none
 }
 
 .catalog-pag__link:active {

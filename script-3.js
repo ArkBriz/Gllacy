@@ -25,3 +25,13 @@ select.addEventListener('keydown', (evt) => {
 select.addEventListener('blur', () => {
   select.classList.remove('sorting__select--opened');
 });
+
+const form = document.querySelector('.filters');
+
+form.addEventListener('keydown', (evt) => {
+  if (evt.key === 'Enter' && evt.target.type === 'checkbox') {
+    evt.preventDefault();
+    const checkbox = evt.target;
+    checkbox.checked = !checkbox.checked;
+  }
+});
