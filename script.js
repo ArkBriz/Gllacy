@@ -1,11 +1,11 @@
 const catalogLink = document.querySelector('.catalog-link');
-const catalogMenu = document.querySelector('.catalog-menu__list');
+const catalogMenu = document.querySelector('.catalog-menu__popup');
 const searchLink = document.querySelector('.search-item .nav__link');
-const searchForm = document.querySelector('.search form');
+const searchForm = document.querySelector('.search-item__popup form');
 const loginLink = document.querySelector('.login-item .nav__link');
-const loginForm = document.querySelector('.login__form');
+const loginForm = document.querySelector('.login-popup__form');
 const cartLink = document.querySelector('.cart-item .nav__link');
-const cart = document.querySelector('.cart');
+const cart = document.querySelector('.cart-popup');
 
 const links = [
   catalogLink,
