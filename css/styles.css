@@ -192,10 +192,10 @@ a {
 .page__header {
   display: flex;
   width: 1170px;
-  margin: 0 50px;
+  margin: 0 50px 23px;
   padding: 24px 0;
 
-  line-height: 20px;
+  line-height: 12px;
 }
 
 .logo {
@@ -226,8 +226,8 @@ a {
 }
 
 .user-nav__list {
-  max-width: 267px;
-  margin-left: 16px;
+  max-width: 275px;
+  margin-left: 11px;
   font-size: 14px;
   line-height: 16px;
 }
@@ -243,13 +243,14 @@ a {
 .nav__link {
   position: relative;
   display: block;
-  padding: 8px 16px;
+  padding: 12px 16px;
   border-radius: 30px;
 }
 
 .user-nav__list .nav__link {
   min-width: 32px;
   min-height: 32px;
+  padding: 8px 16px;
 
   background-color: rgb(252, 252, 252, 0.3);
 }
@@ -286,7 +287,7 @@ a {
 
 .login-item .nav__link,
 .cart-item .nav__link {
-  padding-left: 38px;
+  padding-left: 39px;
 }
 
 .nav__link svg {
@@ -300,7 +301,7 @@ a {
 
 .catalog-menu svg {
   left: auto;
-  right: 10px;
+  right: 15px;
 }
 
 .login-item svg,
@@ -357,7 +358,7 @@ a {
 
   right: auto;
   padding: 0;
-  padding-block: 8px;
+  padding-block: 10px;
 
   font-size: 14px;
   list-style-type: none;
@@ -369,11 +370,11 @@ a {
 
 .catalog-menu__link {
   display: block;
-  padding: 6px 16px;
+  padding: 10px 16px;
 }
 
 .catalog-menu__link--new {
-  padding-block: 8px;
+  padding-block: 10px;
   font-weight: 700;
 }
 
@@ -445,7 +446,7 @@ a {
   flex-grow: 1;
 
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 34px;
   padding: 0;
   list-style-type: none;
 }
@@ -457,11 +458,14 @@ a {
 .login-popup__form .button {
   max-width: 150px;
   margin-right: 23px;
+  padding-block: 11px;
+
+  font-size: 16px;
 }
 
 .login-popup__links {
   display: grid;
-  row-gap: 4px;
+  row-gap: 6px;
   max-width: 150px;
   text-decoration: underline;
   text-underline-position: under;
@@ -561,6 +565,8 @@ a {
 }
 
 .cart-popup__full-price {
+  grid-row: 1 / 3;
+
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
@@ -568,6 +574,8 @@ a {
 }
 
 .cart-popup__delete-button {
+  grid-row: 1 / 3;
+
   width: 25px;
   height: 25px;
   padding: 0;
@@ -605,6 +613,8 @@ a {
 
 .cart-popup__wrap .button {
   width: 198px;
+
+  font-size: 16px;
 }
 
 .cart-popup__total-price {
@@ -639,7 +649,7 @@ a {
 }
 
 .socials__item:not(:nth-child(3n)) {
-  margin-right: 12px;
+  margin-right: 16px;
 }
 
 .socials__link {
@@ -704,7 +714,7 @@ a {
   font-weight: 700;
   background-image: url('../img/icons/heart.svg');
   background-repeat: no-repeat;
-  background-position: 0 4px;
+  background-position: 4px 3px;
 }
 
 .documents__link:hover {
@@ -768,12 +778,13 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 71px;
 }
 
 .offer-container {
   width: 500px;
   align-self: flex-start;
-  margin-top: 136px;
+  margin-top: 113px;
   padding-left: 70px;
 }
 
@@ -809,11 +820,16 @@ a {
 
 .slider__img {
   position: relative;
-  margin-left: 49px;
+  margin-left: 40px;
 }
 
 .slider__img--main {
   margin-left: 0;
+  margin-right: auto;
+}
+
+.slider__img--main img {
+  height: 502px;
 }
 
 .slider__img--small {
@@ -835,7 +851,7 @@ a {
 
 .slider__img--main::before {
   width: 327px;
-  height: 327px;
+  height: 312px;
 }
 
 .slider-btns-wrap {
@@ -925,12 +941,12 @@ a {
 /* Promo */
 
 .promo {
-  margin-bottom: 81px;
+  margin-bottom: 82px;
 }
 
 .section__title {
   margin: 0;
-  margin-bottom: 56px;
+  margin-bottom: 54px;
 
   font-size: 32px;
   line-height: 46px;
@@ -1002,6 +1018,10 @@ a {
   border-radius: 16px;
 }
 
+.advantages__wrapper .section__title {
+  margin-bottom: 55px;
+}
+
 .advantages__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1067,7 +1087,7 @@ a {
 
 .blog__text {
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 
   line-height: 20px;
 }
@@ -1107,13 +1127,17 @@ a {
 
 .subscribe__text {
   margin: 0;
-  margin-bottom: 42px;
+  margin-bottom: 45px;
 }
 
 .subscribe__form {
   display: grid;
   grid-template-columns: 1fr min-content;
   gap: 18px;
+}
+
+.subscribe__form .button {
+  padding-inline: 35px;
 }
 
 .field {
@@ -1172,7 +1196,6 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
-  align-items: center;
 
   margin-bottom: 80px;
   padding: 64px;
@@ -1190,13 +1213,15 @@ a {
 }
 
 .delivery .section__title {
-  margin-bottom: 24px;
+  margin-top: 105px;
+  margin-bottom: 23px;
   text-align: left;
 }
 
 .delivery__form-wrapper {
   width: 500px;
-  padding: 40px;
+  margin-left: auto;
+  padding: 41px;
 
   background-color: #ffffff;
   border-radius: 8px;
@@ -1242,8 +1267,8 @@ a {
 
 .info {
   position: absolute;
-  right: 0;
-  top: 5px;
+  right: 3px;
+  top: 4px;
 
   display: block;
   width: 12px;
@@ -1323,6 +1348,7 @@ a {
 .contacts {
   width: 343px;
   padding: 40px;
+  padding-bottom: 42px;
 
   background-color: #ffffff;
 
@@ -1340,6 +1366,9 @@ a {
 
 .contacts__address-text,
 .contacts__phone {
+  margin: 0;
+  margin-bottom: 25px;
+
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -1353,7 +1382,9 @@ a {
 
 .schedule {
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
+
+  font-size: 14px;
 }
 
 /* Feedback modal */
@@ -1389,8 +1420,8 @@ a {
 
 .modal__close-button {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 24px;
+  right: 24px;
 
   width: 35px;
   height: 35px;
@@ -1429,8 +1460,11 @@ a {
   margin-bottom: 16px;
 }
 
+.feedback-form__group:last-of-type {
+  margin-bottom: 32px;
+}
+
 .feedback-form .button {
-  margin-top: 16px;
   margin-left: auto;
 }
 
@@ -1439,6 +1473,7 @@ a {
 .catalog-header {
   display: flex;
   flex-direction: column;
+  margin-top: 7px;
   margin-bottom: 40px;
 }
 
@@ -1460,7 +1495,7 @@ a {
 }
 
 .breadscrumbs__item:not(:last-child) {
-  margin-right: 4px;
+  margin-right: 8px;
   padding-right: 20px;
 }
 
@@ -1472,7 +1507,7 @@ a {
   content: "";
   position: absolute;
   top: 6px;
-  right: 2px;
+  right: -1px;
 
   display: block;
   width: 12px;
@@ -1502,11 +1537,10 @@ a {
 .filters {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 16px;
+  row-gap: 17px;
 
-  width: 823px;
-  margin-bottom: 95px;
+  width: 850px;
+  margin-bottom: 98px;
 
   font-size: 14px;
   line-height: 20px;
@@ -1514,18 +1548,19 @@ a {
 
 .filters__group {
   margin: 0;
+  margin-right: 24px;
   padding: 0;
   border: none;
 }
 
 .filters__group-title {
   margin-bottom: 8px;
-  margin-left: 16px;
+  margin-left: 15px;
 }
 
 .filters__group-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 8px 16px;
   background-color: rgb(252, 252, 252, 0.3);
   border-radius: 20px;
@@ -1609,11 +1644,11 @@ a {
 }
 
 .toggle-min {
-  left: -8px;
+  left: -6px;
 }
 
 .toggle-max {
-  right: -8px;
+  right: -10px;
 }
 
 .range__toggle:hover,
@@ -1638,7 +1673,6 @@ a {
 
 .control {
   position: relative;
-  display: inline-block;
   margin-right: 16px;
   padding-left: 24px;
 }
@@ -1683,6 +1717,7 @@ input[type="radio"]:checked + .control__mark::before {
 
 .fillers {
   width: 604px;
+  margin-right: 18px;
 }
 
 .fillers .control:nth-child(5n) {
@@ -1795,7 +1830,7 @@ input:checked:disabled + .control__mark::after {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 30px;
-  row-gap: 80px;
+  row-gap: 91px;
 
   margin: 0;
   padding: 0;
@@ -1828,9 +1863,13 @@ input:checked:disabled + .control__mark::after {
   font-weight: 700;
 }
 
+.catalog-card__price {
+  letter-spacing: 0.4px;
+}
+
 .catalog-card__img {
   margin-top: -50px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 
   border-radius: 50%;
   order: -1;
@@ -1846,6 +1885,7 @@ input:checked:disabled + .control__mark::after {
 .catalog-card__wrap {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin-top: auto;
 }
@@ -1901,10 +1941,10 @@ input:checked:disabled + .control__mark::after {
 
 .catalog-pag {
   display: grid;
-  grid-template-columns: 300px 1fr 300px;
+  grid-template-columns: 300px 1fr 314px;
   align-items: center;
   gap: 20px;
-  padding-block: 41px 81px;
+  padding-block: 57px 80px;
   border-bottom: 1px solid rgb(252, 252, 252, 0.3);
 }
 
@@ -1919,7 +1959,6 @@ input:checked:disabled + .control__mark::after {
 
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
   max-width: 300px;
   margin: 0;
   margin-left: auto;
@@ -1948,10 +1987,12 @@ input:checked:disabled + .control__mark::after {
 
 .catalog-pag__link--prev {
   background-image: url('../img/icons/arrow-left.svg');
+  background-position: left;
 }
 
 .catalog-pag__link--next {
   background-image: url('../img/icons/arrow-right.svg');
+  background-position: right;
 }
 
 .catalog-pag__link--inactive {
