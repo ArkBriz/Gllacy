@@ -618,6 +618,7 @@ a {
 .page__footer {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   width: 1170px;
   margin: 0 50px;
   padding: 48px 0;
@@ -646,6 +647,7 @@ a {
   display: block;
   width: 24px;
   height: 24px;
+  margin-bottom: 10px;
 
   background-color: #fcfcfc;
   border-radius: 50%;
@@ -686,6 +688,7 @@ a {
 .documents__list {
   display: grid;
   grid-template-columns: 154px 1fr;
+  row-gap: 8px;
 
   width: 360px;
   margin: 0;
@@ -769,6 +772,8 @@ a {
 
 .offer-container {
   width: 500px;
+  align-self: flex-start;
+  margin-top: 136px;
   padding-left: 70px;
 }
 
@@ -789,25 +794,26 @@ a {
   line-height: 24px;
 }
 
-.section__title {
-  margin: 0;
-  margin-bottom: 56px;
-
-  font-size: 32px;
-  line-height: 46px;
-  font-weight: 900;
-  text-align: center;
+.offer-container .button {
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .slider {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   align-items: center;
   width: 625px;
 }
 
 .slider__img {
   position: relative;
+  margin-left: 49px;
+}
+
+.slider__img--main {
+  margin-left: 0;
 }
 
 .slider__img--small {
@@ -895,6 +901,7 @@ a {
   flex-wrap: wrap;
   gap: 8px;
   min-width: 50px;
+  max-width: 780px;
 
   margin: 0;
   padding: 0;
@@ -921,6 +928,16 @@ a {
   margin-bottom: 81px;
 }
 
+.section__title {
+  margin: 0;
+  margin-bottom: 56px;
+
+  font-size: 32px;
+  line-height: 46px;
+  font-weight: 900;
+  text-align: center;
+}
+
 .promo__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -930,6 +947,7 @@ a {
 .promo-card {
   padding: 36px;
   padding-right: 220px;
+  padding-bottom: 16px;
 
   background-color: #ff7799;
   background-repeat: no-repeat;
@@ -956,6 +974,14 @@ a {
 
 .promo-card__desc {
   margin-bottom: 28px;
+}
+
+.promo-card .button {
+  margin-bottom: 20px;
+}
+
+.promo-card .button:not(:nth-child(2n)) {
+  margin-right: 20px;
 }
 
 /* Advantages */
@@ -1031,7 +1057,7 @@ a {
 
   background-color: #ffffff;
   background-image: url("../img/bg/table-setting-bg.jpg");
-  background-size: contain;
+  background-size: cover;
   border-radius: 16px;
 }
 
